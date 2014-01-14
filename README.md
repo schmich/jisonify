@@ -2,6 +2,10 @@
 
 A [Browserify](https://github.com/substack/node-browserify) v2 transform for [Jison](https://github.com/zaach/jison) parsers.
 
+[![NPM version](https://badge.fury.io/js/jisonify.png)](https://npmjs.org/package/jisonify)
+[![Build Status](https://travis-ci.org/schmich/jisonify.png?branch=master)](https://travis-ci.org/schmich/jisonify)
+[![Dependency Status](https://gemnasium.com/schmich/jisonify.png)](https://gemnasium.com/schmich/jisonify)
+
 ## Installation
 
 ```
