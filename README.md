@@ -11,12 +11,14 @@ npm install jisonify
 ## Usage
 
 ```
-browserify -t jisonify script.js > bundle.js
+browserify -t jisonify main.js > bundle.js
 ```
 
 ## Example
 
 ```js
+// calc.jison
+
 %lex
 %%
 
@@ -29,8 +31,8 @@ browserify -t jisonify script.js > bundle.js
 
 /lex
 
+%left '+' '-'
 %start expressions
-
 %%
 
 expressions
@@ -45,11 +47,12 @@ expr
 ```
 
 ```js
-var parser = require('./parser').parser;
+// main.js
 
-var result = parser.parse('3 + 2 - 1');
+var parser = require('./calc.jison').parser;
+
+var result = parser.parse('50 + 2 - 10');
 console.log(result);
-// ...
 ```
 
 ## License
