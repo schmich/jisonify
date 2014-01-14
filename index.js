@@ -4,8 +4,8 @@
 var jison = require('jison');
 var through = require('through');
 
-function jisonify(file) {
-  if (!file.match(/\.jison$/)) {
+function jisonify(fileName) {
+  if (!fileName.match(/\.jison$/)) {
     return through();
   }
 
