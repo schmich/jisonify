@@ -1,0 +1,36 @@
+{
+  "name": "jisonify",
+  "version": "0.1.0",
+  "description": "Browserify plugin for Jison parsers.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"No tests.\" && exit 1"
+  },
+  "dependencies": {
+    "jison": "0.x.x",
+    "through": "2.x.x"
+  },
+  "devDependencies": {
+    "browserify": "2.x.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/schmich/jisonify.git"
+  },
+  "keywords": [
+    "jison",
+    "browserify"
+  ],
+  "bugs": {
+    "url": "https://github.com/schmich/jisonify/issues"
+  },
+  "author": {
+    "name" : "Chris Schmich",
+    "email" : "schmch@gmail.com",
+    "url" : "https://github.com/schmich"
+  },
+  "homepage": "https://github.com/schmich/jisonify",
+  "contributors": [],
+  "license": "MIT",
+  "readmeFilename": "README.md"
+}
