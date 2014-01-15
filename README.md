@@ -1,6 +1,6 @@
 # Jisonify
 
-A [Browserify](https://github.com/substack/node-browserify) v2 transform for [Jison](https://github.com/zaach/jison) parsers.
+A [Browserify](https://github.com/substack/node-browserify) transform for [Jison](https://github.com/zaach/jison) parsers.
 
 [![NPM version](https://badge.fury.io/js/jisonify.png)](https://npmjs.org/package/jisonify)
 [![Build Status](https://travis-ci.org/schmich/jisonify.png?branch=master)](https://travis-ci.org/schmich/jisonify)
@@ -22,7 +22,6 @@ browserify -t jisonify main.js > bundle.js
 
 ```js
 // calc.jison
-
 %lex
 %%
 
@@ -52,11 +51,33 @@ expr
 
 ```js
 // main.js
-
 var parser = require('./calc.jison').parser;
 
-var result = parser.parse('50 + 2 - 10');
-console.log(result);
+exports = run = function() {
+  var input = document.getElementById('input');
+  var output = document.getElementById('output');
+  output.innerText = parser.parse(input.value);
+};
+```
+
+```
+browserify -t jisonify main.js > bundle.js
+```
+
+```html
+<!-- calc.html --->
+<html>
+  <head>
+    <script src="bundle.js"></script>
+  </head>
+  <body>
+    <form onsubmit="run(); return false;">
+      <input type="text" id="input" value="50 + 2 - 10" />
+      <input type="submit" />
+      Result: <span id="output">&ndash;</span>
+    </form>
+  </body>
+</html>
 ```
 
 ## License
