@@ -1,0 +1,9 @@
+{
+  "name": "jisonify-example",
+  "description": "Jisonify example.",
+  "version": "0.0.1",
+  "dependencies": {
+    "jisonify": "*",
+    "browserify": "*"
+  }
+}
