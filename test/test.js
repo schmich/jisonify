@@ -5,8 +5,8 @@ var jisonify = require('../index');
 var assert = require('assert');
 var vm = require('vm');
 
-function runTest(scriptFileName, b) {
-  b.add(__dirname + '/' + scriptFileName);
+function expectValue(fileName, b, value) {
+  b.add(__dirname + '/' + fileName);
   b.transform(jisonify);
 
   b.bundle(function(err, src) {
@@ -21,9 +21,20 @@ function runTest(scriptFileName, b) {
 
     vm.runInNewContext(src, sandbox);
 
-    assert.equal(sandbox.test.result, 42);
+    assert.equal(sandbox.test.result, value);
   });
 }
 
-runTest('s1.js', browserify());
-runTest('s2.js', browserify({ extensions: '.jison' }));
+function expectError(fileName, b) {
+  b.add(__dirname + '/' + fileName);
+  b.transform(jisonify);
+
+  b.bundle(function(err, src) {
+    if (!err)
+      assert.fail('Expected error parsing Jison file.');
+  });
+}
+
+expectValue('s1.js', browserify(), 42);
+expectValue('s2.js', browserify({ extensions: '.jison' }), 42);
+expectError('s3.js', browserify());

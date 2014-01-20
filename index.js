@@ -10,18 +10,19 @@ function jisonify(fileName) {
   }
 
   var src = '';
-  var stream = through(write, end);
-  return through(write, end);
 
-  function write(buffer) {
-    src += buffer;
+  var stream = through(write, end);
+  return stream;
+
+  function write(data) {
+    src += data;
   }
 
   function end() {
     try {
       var parser = new jison.Parser(src); 
       this.queue(parser.generate());
-    } catch(e) {
+    } catch (e) {
       stream.emit('error', e);
     }
 
