@@ -2,6 +2,8 @@
 
 A [Browserify](https://github.com/substack/node-browserify) transform for [Jison](https://github.com/zaach/jison) parsers.
 
+Mix Jison parsers into your JS files and Browserify projects without needing additional build steps.
+
 [![NPM version](https://badge.fury.io/js/jisonify.png)](https://npmjs.org/package/jisonify)
 [![Build Status](https://travis-ci.org/schmich/jisonify.png?branch=master)](https://travis-ci.org/schmich/jisonify)
 [![Dependency Status](https://gemnasium.com/schmich/jisonify.png)](https://gemnasium.com/schmich/jisonify)
@@ -79,6 +81,20 @@ browserify -t jisonify main.js > bundle.js
     </form>
   </body>
 </html>
+```
+
+### Programmatic example
+
+```js
+var browserify = require('browserify');
+var jisonify = require('jisonify');
+
+var b = browserify();
+b.add('./main.js');
+b.transform(jisonify);
+b.bundle(function(err, src) {
+  // ...
+});
 ```
 
 ## License
