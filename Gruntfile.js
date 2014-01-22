@@ -29,17 +29,21 @@ module.exports = function(grunt) {
     };
 
     inquirer.prompt([question], function(answers) {
-      if (!answers.publish) {
-        grunt.log.write('Publishing canceled.'.red);
-      } else {
-        grunt.log.write('Publishing package...');
-        var result = shell.exec('npm publish "' + archive + '"', { silent: true });
-        if (result.code == 0) {
-          grunt.log.ok();
-        } else {
-          grunt.log.error();
-          grunt.log.error('Error publishing package:\n' + result.output);
+      try {
+        if (answers.publish) {
+          grunt.log.write('Publishing package...');
+          var result = shell.exec('npm publish "' + archive + '"', { silent: true });
+          if (result.code == 0) {
+            grunt.log.ok();
+          } else {
+            grunt.log.error();
+            grunt.log.error('Error publishing package:\n' + result.output);
+          }
         }
+      } finally {
+        grunt.log.write('Removing temporary package...');
+        shell.rm(archive);
+        grunt.log.ok();
       }
 
       done();
