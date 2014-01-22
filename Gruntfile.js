@@ -2,14 +2,14 @@ var shell = require('shelljs');
 var inquirer = require('inquirer');
 
 module.exports = function(grunt) {
-  grunt.registerTask('publish', 'Publish package to npm.', function() {
+  grunt.registerTask('npm:publish', 'Publish package to npm.', function() {
     var done = this.async();
 
     grunt.log.write('Creating package...');
 
     var result = shell.exec('npm pack', { silent: true });
     if (result.code == 0) {
-      grunt.log.ok().write();
+      grunt.log.ok();
     } else {
       grunt.log.error().error('Error creating package:\n' + result.output);
       done();
