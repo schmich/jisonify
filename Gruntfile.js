@@ -9,11 +9,9 @@ module.exports = function(grunt) {
 
     var result = shell.exec('npm pack', { silent: true });
     if (result.code == 0) {
-      grunt.log.ok();
-      grunt.log.write();
+      grunt.log.ok().write();
     } else {
-      grunt.log.error();
-      grunt.log.error('Error creating package:\n' + result.output);
+      grunt.log.error().error('Error creating package:\n' + result.output);
       done();
       return;
     }
@@ -36,8 +34,7 @@ module.exports = function(grunt) {
           if (result.code == 0) {
             grunt.log.ok();
           } else {
-            grunt.log.error();
-            grunt.log.error('Error publishing package:\n' + result.output);
+            grunt.log.error().error('Error publishing package:\n' + result.output);
           }
         }
       } finally {
