@@ -1,6 +1,6 @@
 {
   "name": "jisonify",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Browserify plugin for Jison parsers.",
   "main": "index.js",
   "scripts": {
