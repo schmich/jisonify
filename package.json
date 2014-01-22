@@ -11,7 +11,10 @@
     "through": "2.x.x"
   },
   "devDependencies": {
-    "browserify": "3.x.x"
+    "browserify": "3.x.x",
+    "grunt": "0.x.x",
+    "shelljs": "0.x.x",
+    "inquirer": "0.x.x"
   },
   "repository": {
     "type": "git",
@@ -25,9 +28,9 @@
     "url": "https://github.com/schmich/jisonify/issues"
   },
   "author": {
-    "name" : "Chris Schmich",
-    "email" : "schmch@gmail.com",
-    "url" : "https://github.com/schmich"
+    "name": "Chris Schmich",
+    "email": "schmch@gmail.com",
+    "url": "https://github.com/schmich"
   },
   "homepage": "https://github.com/schmich/jisonify",
   "contributors": [],

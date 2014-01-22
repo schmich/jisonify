@@ -2,4 +2,4 @@ test
 example
 .npmignore
 .travis.yml
-README.md
+Gruntfile.js
