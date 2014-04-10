@@ -4,9 +4,9 @@ A [Browserify](https://github.com/substack/node-browserify) transform for [Jison
 
 Mix Jison parsers into your JS files and Browserify projects without needing additional build steps.
 
-[![NPM version](https://badge.fury.io/js/jisonify.png)](https://npmjs.org/package/jisonify)
-[![Build Status](https://travis-ci.org/schmich/jisonify.png?branch=master)](https://travis-ci.org/schmich/jisonify)
-[![Dependency Status](https://gemnasium.com/schmich/jisonify.png)](https://gemnasium.com/schmich/jisonify)
+[![NPM version](https://badge.fury.io/js/jisonify.svg)](https://npmjs.org/package/jisonify)
+[![Build Status](https://travis-ci.org/schmich/jisonify.svg?branch=master)](https://travis-ci.org/schmich/jisonify)
+[![Dependency Status](https://gemnasium.com/schmich/jisonify.svg)](https://gemnasium.com/schmich/jisonify)
 
 ## Installation
 
