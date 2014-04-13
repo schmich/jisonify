@@ -4,7 +4,7 @@
   "description": "Browserify plugin for Jison parsers.",
   "main": "index.js",
   "scripts": {
-    "test": "node test/test.js"
+    "test": "mocha --reporter spec test/test*"
   },
   "dependencies": {
     "through": "^2.3.4",
@@ -14,7 +14,8 @@
     "shelljs": "^0.2.6",
     "grunt": "^0.4.4",
     "inquirer": "^0.4.1",
-    "browserify": "^3.41.0"
+    "browserify": "^3.41.0",
+    "mocha": "^1.18.2"
   },
   "repository": {
     "type": "git",
