@@ -7,14 +7,14 @@
     "test": "node test/test.js"
   },
   "dependencies": {
-    "jison": "0.x.x",
-    "through": "2.x.x"
+    "through": "^2.3.4",
+    "jison": "^0.4.13"
   },
   "devDependencies": {
-    "browserify": "3.x.x",
-    "grunt": "0.x.x",
-    "shelljs": "0.x.x",
-    "inquirer": "0.x.x"
+    "shelljs": "^0.2.6",
+    "grunt": "^0.4.4",
+    "inquirer": "^0.4.1",
+    "browserify": "^3.41.0"
   },
   "repository": {
     "type": "git",
