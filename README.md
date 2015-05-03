@@ -67,7 +67,7 @@ browserify -t jisonify main.js > bundle.js
 ```
 
 ```html
-<!-- calc.html --->
+<!-- calc.html -->
 <!DOCTYPE html>
 <html>
   <head>
