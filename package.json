@@ -1,7 +1,7 @@
 {
   "name": "jisonify",
   "version": "1.0.4",
-  "description": "Browserify plugin for Jison parsers.",
+  "description": "Browserify transform for Jison parsers.",
   "main": "index.js",
   "scripts": {
     "test": "mocha --reporter spec test/test*"
