@@ -92,9 +92,7 @@ var jisonify = require('jisonify');
 var b = browserify();
 b.add('./main.js');
 b.transform(jisonify);
-b.bundle(function(err, src) {
-  // ...
-});
+b.bundle().pipe(process.stdout);
 ```
 
 ## License
