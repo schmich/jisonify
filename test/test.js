@@ -16,7 +16,7 @@ function expectValue(fileName, b, value, done) {
     assert.ok(src);
 
     var sandbox = {
-      test: { result: 0 }
+      test: { result: null }
     };
 
     vm.runInNewContext(src, sandbox);
